@@ -1,0 +1,698 @@
+/*~~~~~~~~~~RESET~~~~~~~~~~~~~~~*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+/* ~~~~~~~~~STYLES ~~~~~~~~~~~ */
+
+/*STARTING PAGE*/
+html,body
+{
+    background-image: linear-gradient(rgba(253, 205, 68,1),rgba(244, 129, 73,1));
+    width:100%;
+    height:100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+}
+body
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.st_page
+{
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+}
+.st_page > p
+{
+    font-size: 34;
+    margin-top: 0;
+    margin-bottom: 8;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.logo
+{
+    margin-top: 10;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 20px;
+}
+.login
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.loggedin
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.about
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 14px;
+}
+.about_p
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:200px ;
+}
+.about_p > p
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 28px;
+}
+
+
+/*LOGIN AND REGISTER BUTTONS*/
+
+.register-form > form > .forgot
+{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.register-form > form > .forgot > a
+{
+    font-size: 20;
+}
+.login > a > button
+{
+    width: 150px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+}
+.login > a > button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.login > a > button:focus   
+{
+    outline: none;
+}
+.loggedin > a > button
+{
+    width: 150px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+}
+.loggedin > a > button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.loggedin > a > button:focus   
+{
+    outline: none;
+}
+
+/*ABOUT BUTTON*/
+.about > a > button
+{
+    width: 150px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+}
+.about > a > button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.about > a > button:focus   
+{
+    outline: none;
+}
+
+
+/*HOME BUTTON*/
+.home > a > button
+{
+  text-decoration: none;
+    outline: none;
+  border-width: 0;
+  background-color: transparent;
+}
+.home > a > button:hover
+{
+    cursor: pointer;
+}
+.home
+{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+/*SIGNUP AND LOGIN FORMS*/
+.register-form
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
+.register-form > form > input
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.register-form > form > button
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    padding-top: 30px;
+    border-radius: 6px;
+    border: solid 1px black;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.register-form > p
+{
+    padding-right: 183px;
+    padding-bottom: 20px;
+}
+.register-form > .already
+{
+    display: flexbox;
+    padding-top: 20px;
+
+}
+.register-form > .already > p,a
+{
+    font-size: 20;
+    text-decoration: none;
+}
+.register-form > .already > p
+{
+    float: left;
+    padding-right: 5px;
+}
+.register-form > .already > a
+{
+    float: right;
+}
+.emptyinput
+{
+    margin-top:30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emptyinput > p
+{
+    font-size: 30;
+    margin-top: 5px;
+}
+.wronglogin
+{
+    margin-top:30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wronglogin > p
+{
+    font-size: 30;
+    margin-top: 5px;
+}
+
+/*FORGOT PASSWORD FORM*/
+.forgot-form
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;
+}
+.forgot-form > form > input
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.forgot-form > form > button
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    padding-top: 30px;
+    border-radius: 6px;
+    border: solid 1px black;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.forgot-form > form > button :hover
+{
+    cursor: pointer;
+}
+.forgot-form>p
+{
+    font-size: 26;
+    padding-bottom: 20px;
+}
+
+/* TRACKER CALENDAR BUTTON */
+.cal > a > button
+{
+  outline: none;
+  border-width: 0;
+  background-color: transparent;
+}
+.cal > a > button:hover
+{
+    cursor: pointer;
+}
+
+.container
+{
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.calendar
+{
+    width: 5rem;
+    height: 7rem;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.5);
+}
+.month > i
+{
+    font-size: 13;
+    cursor: pointer;
+}
+.date > h1
+{
+    font-size: 13;
+}
+.weekdays,.days
+{
+    font-size: 11;
+}
+.month
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    background-color: seagreen;
+    padding: 0 0.25rem;
+    text-align: center;
+    text-shadow: 0 .1rem .3rem rgba(0,0,0,0.8));
+}
+.weekdays
+{
+    height: 1.5rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+}
+.weekdays > div
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.8));
+    width: calc(4.6rem/7)
+}
+.days
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+.days > div
+{
+    cursor: pointer;
+    width: calc(4.6rem/7);
+    height: 0.55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+.prev-date,.next-date
+{
+    opacity: 0.5;
+}
+.days>div:hover
+{
+    background-color: seagreen;
+}
+.add-form
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.add-form > form > input
+{
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: 22;
+    background: white;
+    outline: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 7px;
+    padding-left: 7;
+    padding-right: 7;
+}
+.add-form>form
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.add-form > p
+{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 7;
+    margin-bottom: 0;
+}
+.add-form > form>button
+{
+    width: 300px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+}
+.add-form > form>button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.add-form> form>button:focus   
+{
+    outline: none;
+}
+input[name="add-hw"] 
+{
+    width: 300px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+    margin-right: 3px;
+}
+input[name="add-hw"]:hover
+{
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+input[name="add-hw"]:focus
+{
+    outline: none;
+}
+#empty-error
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#empty-error > p
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22;
+    color: red;
+}
+#tracker-buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+input[name="load-more"]:hover
+{
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+input[name="load-more"]:focus
+{
+    outline: none;
+}
+input[name="load-more"] 
+{
+    width: 300px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+    margin-left: 3px;
+}
+#hw-table
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hw-table > table
+{
+    border: 0;
+}
+#hw-table > table,td
+{
+    width: 1200px;
+    height:70px;
+}
+#del > i
+{
+    margin-left: 40px;
+    font-weight: lighter;
+}
+#del > i:hover
+{
+    color: red;
+    cursor: pointer;
+}
+#del:hover
+{
+    cursor: pointer;
+}
